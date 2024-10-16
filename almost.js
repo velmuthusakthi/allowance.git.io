@@ -217,7 +217,7 @@ const blockData = {
 "ABINAYA": {"amount": "3700.00"},
 "ARUNKUMAR": {"amount": "2800.00"},
 },
-"H,I,J,L,G & O (New) BLOCK": {
+"H,I,J,L,G & O New BLOCK": {
 "ELLAMMAL": {"amount": "3500.00"},
 "MALAISAMY": {"amount": "3500.00"},
 "MUNIYASAMY": {"amount": "3500.00"},
