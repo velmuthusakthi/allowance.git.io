@@ -1,0 +1,196 @@
+/* Main Container Styling */
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Ocean Wave Animation */
+@keyframes oceanWave {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+body {
+    background: linear-gradient(180deg, rgba(173, 216, 230, 1) 0%, rgba(224, 255, 255, 1) 100%); /* Lighter ocean colors */
+    background-size: 400% 400%;
+    animation: oceanWave 10s ease infinite; /* Ocean wave animation */
+    position: relative; /* Allow absolute positioning of the clock */
+}
+
+/* Animation for wave text */
+@keyframes waveColorAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-wave {
+    display: inline-block;
+    font-size: 36px; /* Reduced font size */
+    background: linear-gradient(270deg, #0099cc, #00aaff, #0099cc);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    animation: waveColorAnimation 3s infinite linear;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Reduced space around the logo */
+}
+
+.brand-logo {
+    width: 80px; /* Logo size */
+    height: 80px; /* Logo size */
+    background: url('path_to_logo_image.png') no-repeat center center; /* Replace with your logo path */
+    background-size: contain;
+}
+
+.container {
+    width: 90%; /* Full width with some padding on mobile */
+    max-width: 500px; /* Maximum width for responsiveness */
+    padding: 10px; /* Reduced padding */
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: rgba(18, 30, 49, 0.9); /* Darker background for contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    margin: 20px auto; /* Center the container with margin from the top */
+    overflow: hidden; /* Prevents overflow */
+}
+
+.brand-title {
+    width: 100%;
+    margin: 0.5rem 0; /* Further reduced margin */
+    font-weight: 900;
+    font-size: 1rem; /* Reduced font size */
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 1px;
+    text-underline-position: under;
+    text-align: center; /* Center text */
+    color: #ffffff; /* Light text for contrast */
+}
+
+.content {
+    text-align: center; /* Center content */
+}
+
+.login-dark {
+    margin-top: 1rem; /* Reduced margin above form */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Reduced padding */
+}
+
+/* Form Styling */
+.login-dark form {
+    width: 100%; /* Full width */
+    background-color: rgba(31, 42, 53, 0.9); /* Darker form background */
+    padding: 15px; /* Adjusted for better mobile layout */
+    border-radius: 8px;
+    color: #ffffff; /* Light text for contrast */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    overflow: hidden; /* Prevents overflow of the form */
+}
+
+/* General Input Styling */
+.login-dark form .form-control, 
+.login-dark form select {
+    width: 100%; /* Full width for all inputs */
+    background-color: rgba(47, 60, 73, 0.9); /* Darker input background */
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 15px; /* Reduced bottom margin */
+    color: #ffffff; /* Light text for readability */
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+.login-dark form .btn-primary {
+    background-color: rgba(41, 128, 239, 0.9);
+    border: none;
+    border-radius: 4px;
+    padding: 10px; /* Reduced padding */
+    color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover & Active State */
+.login-dark form .btn-primary:hover {
+    background-color: rgba(58, 159, 244, 0.9);
+}
+
+/* Placeholder Text Color */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus Effect for Input and Dropdown */
+.login-dark form .form-control:focus, 
+.login-dark form select:focus {
+    background-color: rgba(65, 80, 94, 0.9); /* Darker on focus */
+    border-color: rgba(58, 159, 244, 0.9);
+    outline: none;
+}
+
+/* Floating Clock Styling */
+.floating-clock {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 10px; /* Smaller margin for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+    
+    .brand-title {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+    
+    .animated-wave {
+        font-size: 28px; /* Smaller animated text for mobile */
+    }
+
+    .login-dark form {
+        padding: 10px; /* Further reduce padding on small screens */
+    }
+
+    .login-dark {
+        flex-direction: column; /* Stack elements vertically */
+    }
+}
