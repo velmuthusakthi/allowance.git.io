@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Dependent Dropdown</title>
+  <link rel="stylesheet" href="almost.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="floating-clock" id="clock"></div>
+
+    <div class="logo-container">
+        <div class="brand-logo" style="background-image: url('path_to_logo_image.png');"></div>
+    </div>
+
+    <div class="container">
+        <div>
+            <div class="content">
+                <h2 class="animated-wave">ESCEE</h2>
+            </div>
+        </div>
+        <div class="brand-title">INDUSTRIES PRIVATE LIMITED</div>
+        <div class="login-dark">
+            <form method="post" id="form">
+                <div id="res" style="color:green;font-size: 14px;"></div>
+                <!-- Dropdown for Block Selection -->
+                <label for="blocklist">Select Block:</label>
+                <select id="blocklist" class="form-control" onchange="populateNameList()">
+                    <option value="">Select a block</option>
+                    <option value="BLOCK A">Block A</option>
+                    <option value="BLOCK B">Block B</option>
+                    <option value="C,M,N BLOCK">C,M,N BLOCK</option>
+                    <option value="BLOCK D">Block D</option>
+                    <option value="BLOCK E">Block E</option>
+                    <option value="BLOCK F">Block F</option>
+                    <option value="BLOCK G">Block G</option>
+                    <option value="H,I,J,L,G & O (New)  BLOCK">H,I,J,L,G & O (New)  BLOCK</option>
+                    <option value="P BLOCK Ist ROW">P BLOCK Ist ROW</option>
+                    <option value="P BLOCK IIst ROW">P BLOCK IIst ROW</option>
+                    <option value="BLOCK Q">BLOCK Q</option>
+                    <option value="BLOCK R">BLOCK R</option>
+                    <option value="Weekly / Daily labour">Weekly / Daily labour</option>
+                    <option value="Motor Attender">Motor Attender</option>
+                    <option value="Raw Salt Loading (JCB/Tractor)">Raw Salt Loading (JCB/Tractor)</option>
+                </select>
+
+                <!-- Dropdown for Name List -->
+                <label for="namelist">Name List:</label>
+                <select id="namelist" class="form-control" onchange="nameAmount()">
+                    <option value="">Select a name</option>
+                </select>
+
+                <!-- Block Value Text Box -->
+                
+                <input style=" display: none;", name="blockName" type="text" id="blockValue" class="form-control" readonly>
+
+                <!-- Name Value Text Box -->
+              
+                <input style=" display: none;", name="nameList" type="text" id="optionValue" class="form-control" readonly>
+
+                <!-- Amount Value Text Box -->
+               
+                <input placeholder="Amount Value" name="amountValue" type="text" id="amountValue" class="form-control" readonly>
+
+                <!-- Dropdown for Bank Name -->
+                <label for="bankName">Bank Name:</label>
+                <select id="bankName" class="form-control" onchange="displayBankName()">
+                    <option value="">Select a bank</option>
+                    <option value="SBI">State Bank of India (SBI)</option>
+                    <option value="ICICI">ICICI Bank</option>
+                    <option value="HDFC">HDFC Bank</option>
+                    <option value="PNB">Punjab National Bank (PNB)</option>
+                </select>
+
+                <!-- Input field to display selected Bank Name -->
+                
+                <input style=" display: none;", name="selecetdBank" type="text" id="selectedBank" class="form-control" readonly>
+
+                <!-- Account Number Input -->
+                <label for="accountNumber">Account Number:</label>
+                <input name="accountNumber" type="number" id="accountNumber" class="form-control" placeholder="Enter account number">
+        
+                <input name="branch" class="form-control" type="text" id="uppercase-input" oninput="this.value = this.value.toUpperCase();" style="text-transform: uppercase;" placeholder="Branch">
+
+                <input name="ifsc" type="text" id="IFSC" class="form-control" placeholder="IFSC" 
+                oninput="this.value = this.value.toUpperCase();" style="text-transform: uppercase;">
+
+                <!-- Remarks Input -->
+                <label for="remarks">Remarks:</label>
+                <textarea name="remarks" id="remarks" class="form-control" rows="4" placeholder="Enter remarks"></textarea>
+
+                <button class="btn-primary" name ="btn" type="submit" href="/">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="almost.js"></script>
+</body>
+</html>
